@@ -18,3 +18,13 @@ jobs:
       run: mvn clean package -DskipTests
     - name: Run tests with H2
       run: mvn test -Dspring.profiles.active=test
+
+
+- name: Build Docker image
+      run: docker build -t my-app .
+
+    - name: Deploy to production
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.srv-d4io0p49c44c73b0n32g}}
+        api-key: ${{ secrets.githubrender }}
