@@ -1,1 +1,4 @@
+com\example\demoTest\repository\StudentRepository.class
 com\example\demoTest\DemoApplication.class
+com\example\demoTest\controller\StudentController.class
+com\example\demoTest\model\Student.class
